@@ -46,3 +46,6 @@ document.body.onclick = function(){
 }
 ```
 
+## /!\ Pour la prochaine fois
+
+Télécharger et installer NodeJS : https://nodejs.org/en/
