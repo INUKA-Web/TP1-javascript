@@ -2,19 +2,36 @@
 <html>
   <head>
     <title>Mon horloge</title>
-
+    <style>
+      .heureActive { color: green; }
+      .heureInactive { color: red; }
+    </style>
   </head>
   <body>
-    <h1>Bonjour, il est : </h1>
+    <h1>Bonjour, il est : <span id="heure"></span></h1>
     <script>
-      document.body.onclick = function(){
+      /**
+       * Ajoute l'heure dans l'élément appelé "heure"
+       */
+      function ajouteHeure(){
         var t = new Date();
         //document.getElementsByTagName("h1")[0].innerHTML += t;
         document.getElementById("heure").innerHTML = affichage(t);
       }
 
+      /**
+       * Formatte l'heure pour correspondre au format H:M:S
+       */
       function affichage(h) {
         return h.getHours() + ":" + h.getMinutes() + ":" + h.getSeconds();
+      }
+
+      document.body.onload = ajouteHeure;
+
+      setInterval(ajouteHeure, 1000);
+
+      document.getElementById("heure").onclick = function() {
+        document.getElementById("heure").className = "heureActive";
       }
     </script>
   </body>
