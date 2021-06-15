@@ -82,6 +82,19 @@ var texte1 = document.createTextNode("COUCOU")
 p.appendChild(texte1)
 ```
 
+- Fonctions les plus utiles pour récupérer un élément dans le DOM :
+
+```javascript
+// Renvoie un noeud DOM de type Element
+document.getElementById()
+
+// Renvoie un NodeList qui ne contient que des éléments
+document.getElementsByName()
+
+// Renvoie un NodeList qui ne contient que des éléments
+document.getElementsByClassName()
+```
+
 
 ## /!\ Pour la prochaine fois
 
