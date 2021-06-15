@@ -8,6 +8,8 @@ Pour utiliser la console du navigateur : ouvrir une page web et appuyer sur F12 
 
 ## Exemples de code
 
+- Déclaration et utilisation de variables
+
 ```javascript
 var a = 12;
 
@@ -21,4 +23,12 @@ a = decremente(a);
 
 // Pour afifcher une popup :
 alert(a);
+```
+
+- Passage d'une fonction en argument d'une autre fonction (callback)
+
+```javascript
+function modifieVariable(a, f) { return f(a); }
+
+a = modifieVariable(a, incremente);
 ```
