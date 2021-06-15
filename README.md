@@ -98,4 +98,18 @@ document.getElementsByClassName()
 
 ## /!\ Pour la prochaine fois
 
-Télécharger et installer NodeJS : https://nodejs.org/en/
+**Télécharger et installer NodeJS : https://nodejs.org/en/**
+
+### Exercice
+
+Reprendre l'exemple de code et faire en sorte que :
+
+- Au démarrage, l'horloge s'affiche mais ne se met pas à jour
+- Quand on clique dessus, elle passe en vert et elle se met à fonctionner
+- Quand on re-clique dessus, elle passe en rouge et elle arrête de fonctionner
+- etc.
+
+Aide :
+
+- les classes de style pour vert et rouge sont déjà écrites.
+- pour arrêter le comptage, il faut supprimer l'effet de la fonction `setInterval` avec [`clearInterval`](https://www.w3schools.com/jsref/met_win_clearinterval.asp)
