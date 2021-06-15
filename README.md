@@ -46,6 +46,20 @@ document.body.onclick = function(){
 }
 ```
 
+- Fermeture (closure)
+
+```javascript
+function soustrait(y) {
+    return function (x) {
+        return x - y;
+    }
+}
+
+var soustrait2 = soustrait(2);
+
+soustrait2(5);
+```
+
 ## /!\ Pour la prochaine fois
 
 Télécharger et installer NodeJS : https://nodejs.org/en/
