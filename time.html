@@ -7,9 +7,14 @@
   <body>
     <h1>Bonjour, il est : </h1>
     <script>
-      var t = new Date();
       document.body.onclick = function(){
-        alert(t);
+        var t = new Date();
+        //document.getElementsByTagName("h1")[0].innerHTML += t;
+        document.getElementById("heure").innerHTML = affichage(t);
+      }
+
+      function affichage(h) {
+        return h.getHours() + ":" + h.getMinutes() + ":" + h.getSeconds();
       }
     </script>
   </body>
