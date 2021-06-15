@@ -60,6 +60,29 @@ var soustrait2 = soustrait(2);
 soustrait2(5);
 ```
 
+- Manipulations du DOM
+
+```javascript
+// Récupération du premier paragraphe de la page :
+var p = document.getElementsByTagName("p")[0]
+
+// Récupération de la liste des sous-noeuds de ce paragraphe :
+p.childNodes
+
+// Récupération du premier noeud texte à l'intérieur de ce paragraphe :
+p.childNodes[0]
+
+// Récupération du contenu du premier noeud texte à l'intérieur de ce paragraphe :
+p.childNodes[0].data
+
+// Création d'un nouveau noeud dans le document (mais non affiché)
+var texte1 = document.createTextNode("COUCOU")
+
+// Ajout du nouveau noeud à la fin de la liste des sous-noeuds du paragraphe :
+p.appendChild(texte1)
+```
+
+
 ## /!\ Pour la prochaine fois
 
 Télécharger et installer NodeJS : https://nodejs.org/en/
