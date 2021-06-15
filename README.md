@@ -13,11 +13,15 @@ Pour utiliser la console du navigateur : ouvrir une page web et appuyer sur F12 
 ```javascript
 var a = 12;
 
-function incremente(a) { return a+1; }
+function incremente(a) {
+    return a+1;
+}
 
 a = incremente(a);
 
-function decremente(a) { return a-1; }
+function decremente(a) {
+    return a-1;
+}
 
 a = decremente(a);
 
@@ -28,7 +32,17 @@ alert(a);
 - Passage d'une fonction en argument d'une autre fonction (callback)
 
 ```javascript
-function modifieVariable(a, f) { return f(a); }
+function modifieVariable(a, f) {
+    return f(a);
+}
 
 a = modifieVariable(a, incremente);
 ```
+
+- S'abonner à un événement
+```javascript
+document.body.onclick = function(){
+    alert(modifieVariable(a, decremente));
+}
+```
+
